@@ -2,24 +2,24 @@ import { describe, expect, it } from "vitest";
 import { containsDuplicate } from "./solution1";
 
 describe("Contains Duplicate - 217", () => {
-  const tests: { input: number[]; result: boolean }[] = [
+  const tests: { input: number[]; output: boolean }[] = [
     {
       input: [1, 2, 3, 4],
-      result: false,
+      output: false,
     },
     {
       input: [1, 2, 3, 1],
-      result: true,
+      output: true,
     },
     {
       input: [1, 1, 1, 3, 3, 4, 3, 2, 4, 2],
-      result: true,
+      output: true,
     },
   ];
 
   tests.forEach((test) => {
     it(`${test.input}`, () => {
-      expect(containsDuplicate(test.input)).toBe(test.result);
+      expect(containsDuplicate(test.input)).toBe(test.output);
     });
   });
 });
